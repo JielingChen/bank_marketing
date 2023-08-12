@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Prediction</title>
+</head>
+<body>
+    <h2>Input Data for Prediction</h2>
+    <form action="/" method="post">
+        <label for="feature1">age:</label>
+        <input type="text" id="feature1" name="feature1"><br><br>
+
+        <label for="feature2">job:</label>
+        <input type="text" id="feature2" name="feature2"><br><br>
+
+        <label for="feature3">marital:</label>
+        <input type="text" id="feature3" name="feature3"><br><br>
+
+        <label for="feature4">education:</label>
+        <input type="text" id="feature4" name="feature4"><br><br>
+
+        <label for="feature5">default:</label>
+        <input type="text" id="feature5" name="feature5"><br><br>
+
+        <label for="feature6">housing:</label>
+        <input type="text" id="feature6" name="feature6"><br><br>
+
+        <label for="feature7">loan:</label>
+        <input type="text" id="feature7" name="feature7"><br><br>
+
+        <label for="feature8">contact_type:</label>
+        <input type="text" id="feature8" name="feature8"><br><br>
+
+        <label for="feature9">month:</label>
+        <input type="text" id="feature9" name="feature9"><br><br>
+
+        <label for="feature10">day_of_week:</label>
+        <input type="text" id="feature10" name="feature10"><br><br>
+
+        <label for="feature11">camp_nr_contacts:</label>
+        <input type="text" id="feature11" name="feature11"><br><br>
+
+        <label for="feature12">pre_camp_nr_contacts:</label>
+        <input type="text" id="feature12" name="feature12"><br><br>
+
+        <label for="feature13">pre_camp_outcome:</label>
+        <input type="text" id="feature13" name="feature13"><br><br>
+
+        <label for="feature14">emp.var.rate:</label>
+        <input type="text" id="feature14" name="feature14"><br><br>
+
+        <label for="feature15">cons.price.idx:</label>
+        <input type="text" id="feature15" name="feature15"><br><br>
+
+        <label for="feature16">cons.conf.idx:</label>
+        <input type="text" id="feature16" name="feature16"><br><br>
+
+        <label for="feature17">euribor3m:</label>
+        <input type="text" id="feature17" name="feature17"><br><br>
+
+        <label for="feature18">nr.employed:</label>
+        <input type="text" id="feature18" name="feature18"><br><br>
+
+
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <!-- Display the prediction result -->
+    {% if request.method == 'POST' %}
+    <hr>
+    <h2>Prediction Results:</h2>
+    <p>{{ prediction_text }}</p>
+    {% endif %}
+</body>
+</html>
